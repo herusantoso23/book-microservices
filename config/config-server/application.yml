@@ -1,0 +1,22 @@
+server:
+  port: ${PORT:0}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10001/
+  instance:
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:10000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      show-details: always
