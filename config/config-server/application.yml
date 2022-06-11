@@ -7,6 +7,8 @@ eureka:
       defaultZone: http://localhost:10001/
   instance:
     instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+config:
+  use-legacy-processing: true
 
 spring:
   boot:
