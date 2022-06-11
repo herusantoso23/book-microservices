@@ -13,3 +13,10 @@ spring:
     admin:
       client:
         url: http://localhost:10000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
+    health:
+      show-details: always
