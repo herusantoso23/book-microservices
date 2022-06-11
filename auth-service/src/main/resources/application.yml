@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: @project.artifactId@
+    version: @project.version@
+  profiles:
+    active: local
+
+---
+spring:
+  profiles: local
+server:
+  port: 10001
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+---
+spring:
+  profiles: heroku
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false

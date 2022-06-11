@@ -9,18 +9,4 @@ spring:
 spring:
   profiles: local
 server:
-  port: 8761
-eureka:
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-
----
-spring:
-  profiles: heroku
-eureka:
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
+  port: 10000
