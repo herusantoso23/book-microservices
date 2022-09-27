@@ -3,17 +3,21 @@ pipeline {
     stages {
         stage("Build"){
             steps {
-                echo("Hello Build")
+                echo("Start Build")
+                sh("cd admin; ./mwnw clean compile test-compile")
+                echo("Finish Build")
             }
         }
         stage("Test"){
             steps {
-                echo("Hello Test")
+                echo("Start Test")
+                sh("cd admin; ./mwnw test")
+                echo("Finish Test")
             }
         }
         stage("Deploy"){
             steps {
-                echo("Hello Deploy")
+                echo("Deployment is finished")
             }
         }
     }
