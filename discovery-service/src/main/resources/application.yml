@@ -8,6 +8,8 @@ spring:
     admin:
       client:
         url: http://localhost:10000
+  config:
+    use-legacy-processing: true
 management:
   endpoints:
     web:

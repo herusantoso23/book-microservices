@@ -4,7 +4,8 @@ spring:
     version: @project.version@
   profiles:
     active: local
-
+  config:
+    use-legacy-processing: true
 ---
 spring:
   profiles: local
