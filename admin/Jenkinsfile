@@ -4,14 +4,14 @@ pipeline {
         stage("Build"){
             steps {
                 echo("Start Build")
-                sh("cd admin; ./mwnw clean compile test-compile")
+                sh("cd admin; ./mvnw clean compile test-compile")
                 echo("Finish Build")
             }
         }
         stage("Test"){
             steps {
                 echo("Start Test")
-                sh("cd admin; ./mwnw test")
+                sh("cd admin; ./mvnw test")
                 echo("Finish Test")
             }
         }
